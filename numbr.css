@@ -1,0 +1,39 @@
+.btn.numbr {
+	margin-bottom: 20px;
+	width: 50px;
+}
+
+div#numbers {
+    min-height: 50vh;
+    position: relative;
+}
+
+div#numbers.higher:before,
+div#numbers.lower:before,
+div#numbers.correct:before,
+div#numbers.game-over:before {
+    align-items: center;
+    background: #cccccc80;
+	color: #73232B;
+    display: flex;
+    font-family: 'Ubuntu',sans-serif;
+    font-size: 2rem;
+    height: 100%;
+    justify-content: center;
+    position: absolute;
+    width: 100%;
+}
+
+div#numbers.higher:before {
+	content: "Higher";
+}
+div#numbers.lower:before {
+	content: "Lower";
+}
+div#numbers.game-over:before {
+	content: "GAME OVER\a Answer: " attr(data-ans);
+	white-space: pre;
+}
+div#numbers.correct:before {
+	content: "Correct!";
+}
